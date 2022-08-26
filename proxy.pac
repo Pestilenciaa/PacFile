@@ -1,7 +1,7 @@
 function FindProxyForURL(url, host) {
 
     // If the hostname matches, send direct.
-        if (dnsDomainIs(host, "smartpulse.io"))
+        if (dnsDomainIs(host, "redis-cluster.staging.smartpulse.io"))
             return "PROXY 10.165.21.101:3130";
     
     // If the protocol or URL matches, send direct.
