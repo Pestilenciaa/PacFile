@@ -3,7 +3,7 @@ function FindProxyForURL(url, host) {
     // If the hostname matches, send direct.
         if (dnsDomainIs(host, "ifconfig.me"))
             return "PROXY 10.165.21.101:3130";
-        if (isInNet(myIpAddress(), "10.165.33.0", "255.255.255.0"))
+        if (isInNet(dnsResolve(host), "10.165.33.0", "255.255.255.0"))
             return "PROXY 10.165.21.101:3130";
     // If the protocol or URL matches, send direct.
     //    if (url.substring(0, 4)=="ftp:" ||
